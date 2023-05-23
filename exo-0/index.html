@@ -11,44 +11,45 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe";         // je déclare une variable nommée name qui prend pour valeur string "Joe"
+        var city = 'London';      // je déclare une variable nommée city qui prend pour valeur string 'London'
+        var age = 32;             // je déclare une variable nommée age qui prend pour valeur number 32
+        var isRed = true;         // je déclare une variable nommée isRed qui prend pour valeur boolean true
+        var isOld = age > 80;     // je déclare une variable nommée isOld qui prend pour valeur une varriable nommée age avec une condition et return un boolean
+        console.log(isOld);
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];   // je déclare une variable nommée previousJobs qui prend pour valeur array de 3 value
 
-        function info(height, weight) {
-            if (height > 180) {
-                console.log('Vous êtes grand');
+        function info(height, weight) {    // je crée une function nommée info qui a deux paramettre nommée height et weight
+            if (height > 180) {            // si la condition est true execute le code
+                console.log('Vous êtes grand');  // affiche dans la console
             }
-            if (weight < 0) {
-                console.log('oups, there is a problem');
-            } else if ( weight < 15) {
-                console.log('Are you that slim ?')
-            } else {
-                console.log('Good !')
+            if (weight < 0) {              // si la condition est true execute le code
+                console.log('oups, there is a problem'); // affiche dans la console
+            } else if ( weight < 15) {     // sinon si condition est true execute le code
+                console.log('Are you that slim ?')  // affiche dans la console
+            } else {                       // sinon 
+                console.log('Good !')      // affiche dans la console
             }
         }
 
-        info(165, 45);
+        info(165, 45);                    // la function info je transmets avec deux arguments 165 45
 
-        var myHeight = 175;
-        var myWeight = 86;
+        var myHeight = 175;               // je déclare une variable nommée myHeight qui prend pour valeur number 175
+        var myWeight = 86;                // je déclare une variable nommée myWeight qui prend pour la valeur number 86
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight);         // à fonction info je transmets deux arguments myHeight et myWeight
 
-        info(myHeight + 15, myWeight - 100);
+        info(myHeight + 15, myWeight - 100);  // à fonction info je transmets deux arguments myHeight et myWeight
 
-        function toUpper(variable) {
-            return variable.toUpperCase();
+        function toUpper(variable) {          // je crée une function nommée toUpper qui a un paramettre nommée variable
+            return variable.toUpperCase();    // returne variable en registre haute
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name);        // je déclare une variable nommée upperName qui prend pour valeur la fonction toUpper avec un parametre
 
-        for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+        for (i = 0; i < 3; i = i + 1) {       // je déclare une boucle for qui parcourt de 0-3
+            console.log(previousJobs[i]);     // je affiche dans la console la valeur de tableau dans la position de la variable i 
         }
 
         /* Section 2: */
