@@ -1,20 +1,30 @@
 // you can write js here
 console.log('exo-2');
-const myDate = new Date(); //"May 28, 2023"
-console.log(myDate);
 
+let isTesting = false;
+const myDate = new Date('May 26, 2023 17:00:00 GMT+02:00'); //"May 28, 2023"  'May 26, 2023 16:00:00 GMT+02:00'
+console.log(myDate);
 
 const semaine = "Aujourd'hui nous somme dans la semaine";
 const weekend = "Aujourd'hui nous somme en weekend";
-const currentDay = myDate.getDay();
-console.log(currentDay);
-const currentTime = myDate.getTime();
+
+let currentDay = myDate.getDay();
+let currentTime = myDate.getHours();
+
+if(isTesting){
+    currentDay = prompt("Enter date please");
+    currentTime = prompt("Enter hours please");
+}else{
+    currentDay = myDate.getDay();
+    currentTime = myDate.getHours();
+}
+
 
 if(currentDay > 0 && currentDay < 6){
-    if(currentTime >= 17){
-        console.log(semaine);
-    }
-}else {console.log(weekend);
-} 
-
-console.log(currentTime);
+    if(currentDay == 5 && currentTime > 17 || currentDay == 1 && currentTime < 9){
+        console.log(weekend);
+    }else {
+        console.log(semaine);}
+}else {
+    console.log(weekend);
+}
