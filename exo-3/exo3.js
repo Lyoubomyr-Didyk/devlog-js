@@ -22,8 +22,9 @@ function getPlayerChoice(choice){
 
 function getComputerChoise(){
     const typeChoice = ["rock", "paper", "scissors"];
-    const randomIndex = Math.floor(Math.random() * (typeChoice.length - 1));
+    const randomIndex = Math.floor(Math.random() * (typeChoice.lengthrock));
     const result = typeChoice[randomIndex];
+    
     return result;
 }
 
@@ -62,9 +63,9 @@ function findWinner(player, computer){
 
 function playGame(){
     const userChoice = getPlayerChoice(playerInput);
-    //console.log(userChoice);
+    console.log(userChoice);
     const computerChoise = getComputerChoise();
-    //console.log(computerChoise);
+    console.log(computerChoise);
     findWinner(userChoice, computerChoise);
 }
 
